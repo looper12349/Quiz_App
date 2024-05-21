@@ -4,7 +4,8 @@ const choices = Array.from(document.getElementsByClassName('option-text'));
 
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
-
+const progressBarFull = document.getElementById('progressBarFull');
+const finalScoreText = document.getElementById('finalScore');
 
 
 
@@ -198,6 +199,7 @@ choices.forEach(choice => {
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
+    localStorage.setItem('finalScore', score);
 };
 
 startGame();
