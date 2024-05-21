@@ -1,0 +1,26 @@
+.option-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid #56a5eb;
+    background-color: white;
+  }
+  
+  .option-container:hover {
+      cursor: pointer;
+      box-shadow:  0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+      transform: translateY(-0.2rem);
+      transition: transform 180ms;
+  }
+  
+  .option-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #56a5eb;
+    color: white;
+  }
+  
+  .option-text {
+    padding: 1.5rem 2.5rem;
+    width: 100%;
+  }
