@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Quiz End </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div id="home" class="flex-center flex-column">
-            <h1>Quick Quiz</h1>
-            <a href="quiz.html" class="btn">Play</a>
+        <div class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <a href="/quiz.html" class="btn">Play Again</a>
+            <a href="/index.html" class="btn">Go Home</a>
         </div>
     </div>
     <footer>
         <p class="signature">Created with  <img src="img/love.png" alt="Love" class="heart-img">  by Amritesh Indal</p>
     </footer>
+    <script>
+        document.getElementById('finalScore').textContent = localStorage.getItem('finalScore');
+    </script>
 </body>
 </html>
