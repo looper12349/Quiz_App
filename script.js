@@ -2,6 +2,9 @@ const question = document.getElementById('question');
 
 const choices = Array.from(document.getElementsByClassName('option-text'));
 
+const questionCounterText = document.getElementById('questionCounter');
+const scoreText = document.getElementById('score');
+
 
 
 
@@ -109,6 +112,8 @@ getNewQuestion = () => {
 
     questionCounter++;
 
+    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
 
     currentQuestion = availableQuestions[questionIndex];
@@ -163,7 +168,7 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') {
 
-            score += CORRECT_BONUS;
+            incrementScore(CORRECT_BONUS);
 
         }
 
@@ -188,7 +193,10 @@ choices.forEach(choice => {
 });
 
 
-
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+};
 
 
 
